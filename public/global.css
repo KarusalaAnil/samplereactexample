@@ -1,0 +1,88 @@
+/* *{
+    
+    box-sizing: border-box;
+
+
+} */
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+button{
+    padding: 15px;
+    margin: 5px;
+} */
+
+
+/* Basic styling for the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Style the button that triggers the dropdown */
+  .dropdown button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  /* Style the dropdown list to be vertical */
+  .dropdown ul {
+    position: absolute;
+    top: 100%; /* Position the list below the button */
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%; /* Ensure dropdown takes the full width of the button */
+    z-index: 1;
+    max-height: 200px;
+    overflow-y: auto; /* Add scrolling for long lists */
+    display: flex;
+    flex-direction: column; /* Make items stack vertically */
+  }
+  
+  /* Style individual dropdown items */
+  .dropdown li {
+    padding: 10px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Hover and focus styles for dropdown items */
+  .dropdown li:hover,
+  .dropdown li.focused {
+    background-color: #f1f1f1; /* Light grey background on hover */
+  }
+  
+  /* Style the selected option */
+  .dropdown li[aria-selected="true"] {
+    background-color: #4CAF50; /* Green background for selected item */
+    color: white; /* White text for selected item */
+  }
+  
+  /* Ensure the button stays styled when focused */
+  .dropdown button:focus {
+    outline: none; /* Remove default outline */
+    border: 2px solid #4CAF50; /* Add custom focus border */
+  }
+  
+  /* Ensure the listbox items are properly focused for keyboard navigation */
+  .dropdown li:focus {
+    outline: none; /* Remove default outline */
+    background-color: #ddd; /* Highlight on focus */
+  }
+  
+  
