@@ -7,6 +7,9 @@ import Orders, { Inventory, Sales } from "./Orders";
 import ContactUs from "./ContactUs";
 import { useSelector } from "react-redux";
 import BarcodeGenerator from "./barcode";
+import BarcodeGenerator1 from "./barcode1";
+import PDFPage from "./pdfpage";
+import ReceiptGenerator from "./report";
 
 
 function Header(){
@@ -17,6 +20,9 @@ function Header(){
                 <li><Link to="/contact">ContactUs</Link></li>
                 <li><Link to="/login/1">Login</Link></li>
                 <li><Link to="/orders">Orders</Link></li>
+                <li><Link to="/borcode">borcode</Link></li>
+                <li><Link to="/pdf">pdf</Link></li>
+                <li><Link to="/report">pdf</Link></li>
                 
         </ul>
 
@@ -48,7 +54,9 @@ function FullLayout() {
                         <Route path="about" element={<About/>}></Route>
                         <Route path="contact" element={<ContactUs/>}></Route>
                         <Route path="login/:id" element={<Login/>}></Route>
-                        <Route path="borcode" element={<BarcodeGenerator/>}></Route>
+                        <Route path="borcode" element={<BarcodeGenerator1/>}></Route> {/*included Font Adjectmenets */}
+                        <Route path="pdf" element={<PDFPage/>}></Route> {/*included Font Adjectmenets */}
+                        <Route path="report" element={<ReceiptGenerator/>}></Route> {/*included Font Adjectmenets */}
                         <Route path="orders" element={<Orders/>}>
                             <Route path="inventory" element={<Inventory/>}></Route>
                             <Route path="sales" element={<Sales/>}></Route>
